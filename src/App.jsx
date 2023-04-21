@@ -7,13 +7,11 @@ import { AuthProvider } from "./context/AuthContext";
 function App() {
 
   return (
-    <div className="App">
-      <AuthProvider>
-        <Suspense fallback={<Loader />}>
-          <Router />
-        </Suspense>
-      </AuthProvider>
-    </div>
+    <AuthProvider>
+      <Suspense fallback={<Loader />}>
+        <Router />
+      </Suspense>
+    </AuthProvider>
   )
 }
 

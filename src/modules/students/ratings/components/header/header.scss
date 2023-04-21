@@ -1,0 +1,45 @@
+.cont-header {
+  width: 100%;
+  box-shadow: 1px 1px 10px #8a8787;
+  background: #CAD225;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+
+  p {
+    font-size: 20px;
+    color: #0c1e25;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+
+    i {
+      font-size: 26px;
+      padding: 10px;
+      background: #0c1e25;
+      border-radius: 50%;
+      color: #FFF;
+    }
+  }
+
+  .btn-log-out {
+    border: none;
+    padding: 10px;
+    background: transparent;
+    color: #0c1e25;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+
+
+    &:hover {
+      color: #333;
+      font-weight: bolder;
+    }
+  }
+}

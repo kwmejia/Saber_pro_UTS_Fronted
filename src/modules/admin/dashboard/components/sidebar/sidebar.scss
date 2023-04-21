@@ -1,0 +1,54 @@
+.cont-sidebar {
+  min-height: 100vh;
+  background: #162B34;
+  max-width: 280px;
+  min-width: 280px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .cont-link {
+    width: 100%;
+    display: flex;
+
+    a {
+      background: #0c1e25;
+      width: 280px;
+      padding: 10px;
+      text-decoration: none;
+      transition: .3s;
+      margin: 5px 20px;
+      border-radius: 5px;
+      color: #9BB4D9;
+
+      &:hover {
+        opacity: .3;
+      }
+
+      &.active {
+        color: #3585F9 !important;
+      }
+    }
+
+  }
+
+  .btn-log-out {
+    border: none;
+    margin-top: 100px;
+    padding: 10px;
+    background: transparent;
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+
+
+    &:hover {
+      color: #CAD225;
+      font-weight: bolder;
+    }
+  }
+}

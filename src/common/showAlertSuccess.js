@@ -1,9 +1,9 @@
 import Swal from 'sweetalert2';
 
-export const showAlertErrorToast = (msg = 'Oops! Ocurrió un error') => {
+export const showAlertSuccessToast = (msg = 'Acción realizada con éxito') => {
   return Swal.fire({
     position: 'top-end',
-    icon: 'error',
+    icon: 'success',
     title: msg,
     toast: true,
     showConfirmButton: false,
@@ -12,10 +12,10 @@ export const showAlertErrorToast = (msg = 'Oops! Ocurrió un error') => {
 }
 
 
-export const showAlertError = (msg = 'Oops! Ocurrió un error') => {
+export const showAlertSuccess = (msg = 'Acción realizada con éxito') => {
   return Swal.fire({
     position: 'center',
-    icon: 'error',
+    icon: 'success',
     title: msg,
     showConfirmButton: false,
     timer: 1500
