@@ -2,6 +2,7 @@ import Swal from "sweetalert2";
 import { useDeleteStudent } from "../../../../services/students";
 import { useGetAllStudents } from "../../../../services/students/useGetAllStudents";
 import { useNavigate } from "react-router-dom";
+import './listStudents.scss';
 
 const ListStudentsPage = () => {
 
@@ -40,7 +41,7 @@ const ListStudentsPage = () => {
       <h1 className="text-center mb-5">Listado de estudiantes</h1>
 
       <section className="w-100 d-flex justify-content-center">
-        <table className="table">
+        <table className="table_">
           <thead>
             <tr>
               <td>#</td>
@@ -62,18 +63,18 @@ const ListStudentsPage = () => {
                 <th>{student.nit}</th>
                 <th>{student.phone}</th>
                 <th>{student.email}</th>
-                <th>
+                <th className="d-flex gap-2">
                   <button
                     className="btn btn-primary"
                     onClick={() => navigateUpdateStudent(student.id)}
                   >
-                    Actualizar
+                    <i className="fas fa-edit"></i>
                   </button>
                   <button
                     className="btn btn-danger"
                     onClick={() => alertDelete(student.id)}
                   >
-                    Eliminar
+                    <i className="fas fa-trash-alt"></i>
                   </button>
                 </th>
               </tr>

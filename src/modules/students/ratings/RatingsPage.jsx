@@ -21,6 +21,18 @@ const RatingsPage = () => {
     }
   }
 
+  const getLevelClass = (score) => {
+    if (score >= 191) {
+      return "four"
+    } else if (score <= 191 && score >= 156) {
+      return "three"
+    } else if (score <= 155 && score >= 126) {
+      return "two"
+    } else {
+      return "one"
+    }
+  }
+
 
   return (
     <section className="container-fluid p-0">
@@ -38,7 +50,7 @@ const RatingsPage = () => {
             <div className="total-point">
               <p>{ratingByStudent.totalScore} <span>/300</span></p>
             </div>
-            <div className="cont-nivel two">
+            <div className={`${getLevelClass(ratingByStudent.totalScore)} + cont-nivel`}>
               {getLevel(ratingByStudent.totalScore)}
             </div>
           </div>
@@ -59,7 +71,7 @@ const RatingsPage = () => {
                     <p className="m-0 fs-2 fw-bold text-orange">{ratingByStudent.writtenCommunication}</p>
                   </div>
                   <div className="d-flex align-items-center justify-content-end w-100">
-                    <div className="cont-nivel two">
+                    <div className={`${getLevelClass(ratingByStudent.writtenCommunication)} + cont-nivel`}>
                       {getLevel(ratingByStudent.writtenCommunication)}
                     </div>
                   </div>
@@ -78,7 +90,7 @@ const RatingsPage = () => {
                     <p className="m-0 fs-2 fw-bold text-orange">{ratingByStudent.quantitativeReasoning}</p>
                   </div>
                   <div className="d-flex align-items-center justify-content-end w-100">
-                    <div className="cont-nivel two">
+                    <div className={`${getLevelClass(ratingByStudent.quantitativeReasoning)} + cont-nivel`}>
                       {getLevel(ratingByStudent.quantitativeReasoning)}
                     </div>
                   </div>
@@ -97,7 +109,7 @@ const RatingsPage = () => {
                     <p className="m-0 fs-2 fw-bold text-orange">{ratingByStudent.criticalReading}</p>
                   </div>
                   <div className="d-flex align-items-center justify-content-end w-100">
-                    <div className="cont-nivel one">
+                    <div className={`${getLevelClass(ratingByStudent.criticalReading)} + cont-nivel`}>
                       {getLevel(ratingByStudent.criticalReading)}
                     </div>
                   </div>
@@ -118,7 +130,7 @@ const RatingsPage = () => {
                     <p className="m-0 fs-2 fw-bold text-orange">{ratingByStudent.citizenCompetences}</p>
                   </div>
                   <div className="d-flex align-items-center justify-content-end w-100">
-                    <div className="cont-nivel one">
+                    <div className={`${getLevelClass(ratingByStudent.citizenCompetences)} + cont-nivel`}>
                       {getLevel(ratingByStudent.citizenCompetences)}
                     </div>
                   </div>
@@ -137,7 +149,7 @@ const RatingsPage = () => {
                     <p className="m-0 fs-2 fw-bold text-orange">{ratingByStudent.english}</p>
                   </div>
                   <div className="d-flex align-items-center justify-content-end w-100">
-                    <div className="cont-nivel one">
+                    <div className={`${getLevelClass(ratingByStudent.english)} + cont-nivel`}>
                       {getLevel(ratingByStudent.english)}
                     </div>
                   </div>
@@ -157,7 +169,7 @@ const RatingsPage = () => {
                     <p className="m-0 fs-2 fw-bold text-orange">{ratingByStudent.math}</p>
                   </div>
                   <div className="d-flex align-items-center justify-content-end w-100">
-                    <div className="cont-nivel one">
+                    <div className={`${getLevelClass(ratingByStudent.math)} + cont-nivel`}>
                       {getLevel(ratingByStudent.math)}
                     </div>
                   </div>
@@ -177,7 +189,7 @@ const RatingsPage = () => {
                     <p className="m-0 fs-2 fw-bold text-orange">{ratingByStudent.softwareDesign}</p>
                   </div>
                   <div className="d-flex align-items-center justify-content-end w-100">
-                    <div className="cont-nivel one">
+                    <div className={`${getLevelClass(ratingByStudent.softwareDesign)} + cont-nivel`}>
                       {getLevel(ratingByStudent.softwareDesign)}
                     </div>
                   </div>
@@ -187,6 +199,10 @@ const RatingsPage = () => {
           </div>
         </div>
       </div>
+
+      <footer>
+        Kevin Wifred Mejia Torres
+      </footer>
     </section>
   )
 }
