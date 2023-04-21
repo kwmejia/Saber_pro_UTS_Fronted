@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "backend": "java -jar Backend.jar",
     "build": "vite build",
     "preview": "vite preview"
   },
